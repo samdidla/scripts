@@ -1,0 +1,8 @@
+{
+    "Subdirectory": "",
+    "S3BucketArn": "arn:aws:s3:::fhnprod-us-east-2-opensearch-migration/bi/bi-click-track-daily-aggregations/",
+    "S3StorageClass": "STANDARD",
+    "S3Config": {
+      "BucketAccessRoleArn": "arn:aws:iam::087633845042:role/opensearch-manual-snapshot-migration-role"
+    }
+}
