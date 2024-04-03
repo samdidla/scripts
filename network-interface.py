@@ -2,7 +2,7 @@ import boto3
 import csv
 import concurrent.futures
 
-client = boto3.client("ec2", region_name="us-east-1")
+client = boto3.client("ec2", region_name="us-west-2")
 
 
 def open_file():
@@ -29,7 +29,7 @@ def process_eni(eni):
         vpcID = response["NetworkInterfaces"][0]["VpcId"]
         vpc_response = client.describe_vpcs(VpcIds=[vpcID])
         for tags in vpc_response["Vpcs"][0]["Tags"]:
-            if tags["Key"] in ["client", "customer"]:
+            if tags["Key"] in ["client", "customer", "environment"]:
                 create_tags(eni, tags["Key"], tags["Value"])
                 # print(tags["Key"])
                 # print(tags["Value"])

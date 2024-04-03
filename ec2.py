@@ -29,7 +29,7 @@ def process_ec2(ec2):
         vpcID = response["Reservations"][0]["Instances"][0]["VpcId"]
         vpc_response = client.describe_vpcs(VpcIds=[vpcID])
         for tags in vpc_response["Vpcs"][0]["Tags"]:
-            if tags["Key"] in ["client", "customer"]:
+            if tags["Key"] in ["client", "customer", "application", "environment"]:
                 create_tags(ec2, tags["Key"], tags["Value"])
                 print(tags["Key"])
                 print(tags["Value"])
