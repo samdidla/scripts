@@ -2,7 +2,7 @@ import boto3
 import csv
 import concurrent.futures
 
-client = boto3.client("ec2", region_name="us-west-2")
+client = boto3.client("ec2", region_name="us-east-2")
 
 
 def open_file():
