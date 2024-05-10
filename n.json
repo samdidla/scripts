@@ -1,67 +1,27 @@
-{
-    "Version": "2012-10-17",
-    "Id": "key-consolepolicy-3",
-    "Statement": [
-        {
-            "Sid": "Enable IAM User Permissions",
-            "Effect": "Allow",
-            "Principal": {
-                "AWS": "arn:aws:iam::087633845042:root"
-            },
-            "Action": "kms:*",
-            "Resource": "*"
-        },
-        {
-            "Sid": "Allow access for Key Administrators",
-            "Effect": "Allow",
-            "Principal": {
-                "AWS": [
-                    "arn:aws:iam::228874976728:role/aws-reserved/sso.amazonaws.com/us-west-2/AWSReservedSSO_AWSAdministratorAccess_60aefe9b2825d55f"
-                ]
-            },
-            "Action": "kms:*",
-            "Resource": "*"
-        },
-        {
-            "Sid": "Allow use of the key",
-            "Effect": "Allow",
-            "Principal": {
-                "AWS": "arn:aws:iam::699063096817:root"
-            },
-            "Action": "kms:*",
-            "Resource": "*"
-        },
-        {
-            "Sid": "Allow use of the key",
-            "Effect": "Allow",
-            "Principal": {
-                "AWS": "arn:aws:iam::789706088473:root"
-            },
-            "Action": "kms:*",
-            "Resource": "*"
-        },
-        {
-            "Sid": "Allow use of the key",
-            "Effect": "Allow",
-            "Principal": {
-                "AWS": "arn:aws:iam::228874976728:root"
-            },
-            "Action": "kms:*",
-            "Resource": "*"
-        },
-        {
-            "Sid": "Allow attachment of persistent resources",
-            "Effect": "Allow",
-            "Principal": {
-                "AWS": "arn:aws:iam::699063096817:root"
-            },
-            "Action": "kms:*",
-            "Resource": "*",
-            "Condition": {
-                "Bool": {
-                    "kms:GrantIsForAWSResource": "true"
-                }
-            }
-        }
-    ]
-}
+
+SRE team began working on the Client TEST environment
+Client Dev Engineering advised code version to be deployed tro CSE team
+
+Client Dev Engineering confirmes which environment will need to be the 1st target
+
+Action Item Tali: Provide listing of validation testing needed for SRE, CSE, and Client DEV Engineering/Clients.
+Infrastructure Validation Testing/List of changes
+SRE Validation Testing
+DB access
+DNS 
+Dynatrace
+Cloudflare
+URLs
+Opensearch
+CSE Engineering Validation Testing
+Application log-in
+URLs
+Opensearch data flow
+Client Dev Engineering and Client Validation Testing
+DNS
+IPs
+Cloudflare (monitoring)
+URLs access
+Performance testing
+Confirm if two domain names can be used
+Action Item SRE project team: Update epic with new stories for Client stage environment
