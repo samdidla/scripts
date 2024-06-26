@@ -19,7 +19,7 @@ def fetch_dynatrace_metrics() -> tuple:
         "from": "now-5m",
     }
     headers = {
-        "Authorization": "Api-Token dt0c01.WQUEJ2TKTC7NP3JSFH7UQBJS.A53XNFXQBQBBKUUJCTEP3ZTHHIE5KRU4JGLG3HXRELCPA55CSMGXWO5MNKGIUWY5"
+        "Authorization": "Api-Token "
     }
 
     try:
